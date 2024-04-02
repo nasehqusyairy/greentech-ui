@@ -13,7 +13,7 @@
   <!-- <meta name="theme-color" content="#0d6efd"> -->
   <style>
     .carousel-item {
-      height: 32rem;
+      height: 80vh;
     }
 
     .carousel-item .carousel-item-bg {
@@ -30,8 +30,7 @@
   </style>
 </head>
 
-<body id="home" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -50%" tabindex="0"
-  data-bs-smooth-scroll="true">
+<body id="home" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true">
 
   <!-- NAVBAR -->
   <div class="position-relative" style="height: 75px;">
@@ -62,48 +61,74 @@
   <!-- CAROUSEL -->
   <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active"
-        aria-current="true"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="active"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class=""></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active carousel-item-start">
+
+      <div class="carousel-item">
         <div class="carousel-item-bg"
-          style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(./assets/img/pexels-steve-johnson-845242.jpg);">
+          style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(./assets/img/bg2.jpg);">
         </div>
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            <h1>SCOPE / SUB THEME</h1>
+            <ul class="mb-3">
+              <li>
+                <small>Science and Mathematics Toward Sustainable Living (Natural Science)</small>
+              </li>
+              <li>
+                <small>Sustainable Industrialization, Advance Material, and Foster Innovation (Engineering, Earth, and
+                  Information
+                  science)</small>
+              </li>
+              <li>
+                <small> Adaptive Technology for Energy Efficiency and Climate Change (Technology, Energy, and
+                  Environmental
+                  Science)</small>
+              </li>
+              <li>
+                <small>Sustainable Architecture and Cities (Architecture, Planning, and Environmental
+                  Engineering)</small>
+              </li>
+            </ul>
+            <p><a class="btn btn-lg btn-primary" href="#about">Learn More</a></p>
           </div>
         </div>
       </div>
-      <div class="carousel-item carousel-item-next carousel-item-start">
+
+      <div class="carousel-item active">
         <div class="carousel-item-bg"
-          style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(./assets/img/pexels-aditya-aiyar-1407305.jpg);">
+          style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(./assets/img/bg1.jpg);">
         </div>
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            <h1>THE 14TH INTERNATIONAL CONFERENCE ON GREEN TECHNOLOGY (ICGT)</h1>
+            <p>"Emerging Green Technology: A Path Towards Resilient and
+              Sustainable Built Environment"</p>
+            <p>October 2024 - Hybrid Meeting</p>
+            <p>Malang, Indonesia</p>
+            <p><a class="btn btn-lg btn-primary" href="#myCarousel">Coming Soon</a></p>
           </div>
         </div>
       </div>
-      <div class="carousel-item">
+
+      <div class="carousel-item carousel-item-start">
         <div class="carousel-item-bg"
-          style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(./assets/img/pexels-pixabay-208560.jpg);">
+          style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(./assets/img/bg3.jpg);">
         </div>
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            <h1>INTERNATIONAL CONFERENCE ON GREEN TECHNOLOGY (ICGT)</h1>
+            <p class="opacity-75">An annual multidisciplinary meeting for cultivating and promoting
+              interactions between educators, scientists, engineers, and industry researchers in studying the
+              development of science & technology and related area.</p>
+            <p><a class="btn btn-lg btn-primary" href="./login.html">Sign Up Today</a></p>
           </div>
         </div>
       </div>
+
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -119,23 +144,38 @@
   <!-- ABOUT -->
   <section id="about" class="py-5">
     <div class="container">
-      <div class="row align-items-center">
+      <h3 class="display-4">About 14th ICGT 2024</h3>
+      <div class="row">
         <div class="col-lg-6">
-          <h3 class="display-4">About Us</h3>
-          <p class="lead text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptate excepturi illo beatae sunt. Soluta
-            cumque, error assumenda non necessitatibus neque minima ratione recusandae harum, sed illum molestias ex a!.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, nostrum voluptates. Natus aut quia
-            voluptatum quam distinctio reiciendis id culpa repellat quos pariatur earum perferendis sapiente nulla, ad
-            iure rerum.
+          <p class="text-justify">
+            It is our pleasure to welcome you to the 2024 14th International Conference of Green Technology (ICGT 2024)
+            in Malang, Indonesia. The ICGT is an annual multidisciplinary meeting for cultivating and promoting
+            interactions between educators, scientists, engineers, and industry researchers in studying the development
+            of science & technology and related area. In the last decade, educators and scientists concerned about how
+            to discipline integration can be achieved and shifted from traditional methods that focused on science,
+            technology, engineering, and mathematics as isolated disciplines. Therefore, “Emerging Green Technology: A
+            Path Towards Resilient and Sustainable Built Environment” become the theme of The 14th ICGT 2024.
           </p>
-          <p class="lead text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis et reprehenderit
-            quos mollitia molestias.
-            Rem, odit eaque! Ipsa maiores praesentium nobis minima assumenda dignissimos libero. Animi provident
-            distinctio voluptas porro.</p>
+          <p class="text-justify">The scientific programs consist of keynote lectures, plenary lectures, and invited
+            lectures in parallel sessions covering a wide range of topics in STEM areas. A major goal of these
+            conferences introduce students to learning and working in the STEM world, keep experts in the STEM field
+            aware of current developments, and provide exchange their research results about most aspects of science and
+            technology. We expected ICGT to play an important role in preparing all attendees to be leaders in STEM
+            fields and solve the current practical challenges encountered from various perspectives.</p>
         </div>
         <div class="col-lg-6">
-          <img src="./assets/img/pexels-photo-1122418.jpeg" alt="" class="img-fluid rounded-3">
+          <p class="text-justify">
+            Faced with our new way of living, the 14th ICGT 2024 will be held fully hybrid on Malang, from October 1 and
+            2, 2024. These hybrid conferences are held with a limited number of virtual participants and push for a
+            return-to-physically meeting. All participants will have the same opportunities to present work either
+            virtually or on-site, in Malang Indonesia.
+          </p>
+          <p class="text-justify">
+            Participants who want to present their papers should submit their full papers. Only selected papers will be
+            presented at the conferences. The review process will take at most one month. The deadline for full paper
+            submission will be on September 1, 2024, and the selected full paper will be published in the Conference
+            Proceedings by IOP Conference Series: Earth and Environmental Science indexed by Scopus.
+          </p>
         </div>
       </div>
     </div>
@@ -444,7 +484,7 @@
 
   <script>
     // Set the date we're counting down to
-    const countDownDate = new Date(`Jan 1, ${new Date().getFullYear() + 1} 00:00:00`).getTime();
+    const countDownDate = new Date("Oct 1, 2024 00:00:00").getTime();
 
     // Update the count down every 1 second
     const x = setInterval(function () {
