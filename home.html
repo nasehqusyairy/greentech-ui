@@ -69,24 +69,24 @@
       border-radius: 10px;
     }
 
-    #posts .col-lg-4 .card {
+    #posts .conference-item .card {
       opacity: 1 !important;
       top: 50%;
     }
 
-    #posts .col-lg-4:hover img {
+    #posts .conference-item:hover img {
       transform: scale(0.825);
     }
 
-    #posts .col-lg-4:hover .card {
+    #posts .conference-item:hover .card {
       transform: scale(0.9);
     }
 
-    #posts .col-lg-4 {
+    #posts .conference-item {
       cursor: pointer;
     }
 
-    #posts .col-lg-4 img {
+    #posts .conference-item img {
       transform: scale(.75);
     }
 
@@ -888,11 +888,11 @@
       <h3 class="display-4 text-muted text-center">Previous Conferences</h3>
       <div class="row">
 
-        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+        <div class="col-md-4 conference-item mb-3 position-relative">
           <div class="text-center">
             <img src="./assets/img/greentech2015 - persegi.jpg" alt="greentech2015.jpg" class="mb-3 rounded w-100">
           </div>
-          <div class="card position-absolute z-2 opacity-0 img-captions">
+          <div class="card position-absolute z-2 opacity-0 img-captions d-xl-block d-none">
             <div class="card-body px-5">
               <h3 class="fw-bold display-6 text-muted">The 8th ICGT</h3>
               <div class="text-muted">
@@ -914,11 +914,11 @@
           </div>
         </div>
 
-        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+        <div class="col-md-4 conference-item mb-3 position-relative">
           <div class="text-center">
             <img src="./assets/img/greentech2017 - persegi.jpg" alt="greentech2017.jpg" class="mb-3 rounded w-100">
           </div>
-          <div class="card position-absolute z-2 opacity-0 img-captions">
+          <div class="card position-absolute z-2 opacity-0 img-captions d-xl-block d-none">
             <div class="card-body px-5">
               <h3 class="fw-bold display-6 text-muted">The 6th ICGT</h3>
               <div class="text-muted">
@@ -939,11 +939,11 @@
           </div>
         </div>
 
-        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+        <div class="col-md-4 conference-item mb-3 position-relative">
           <div class="text-center">
             <img src="./assets/img/greentech2019 - persegi.jpg" alt="greentech2019.jpg" class="mb-3 rounded w-100">
           </div>
-          <div class="card position-absolute z-2 opacity-0 img-captions">
+          <div class="card position-absolute z-2 opacity-0 img-captions d-xl-block d-none">
             <div class="card-body px-5">
               <h3 class="fw-bold display-6 text-muted">The 10th ICGT</h3>
               <div class="text-muted">
@@ -964,11 +964,11 @@
           </div>
         </div>
 
-        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+        <div class="col-md-4 conference-item mb-3 position-relative">
           <div class="text-center">
             <img src="./assets/img/greentech2021 - persegi.jpeg" alt="greentech2021.jpeg" class="mb-3 rounded w-100">
           </div>
-          <div class="card position-absolute z-2 opacity-0 img-captions">
+          <div class="card position-absolute z-2 opacity-0 img-captions d-xl-block d-none">
             <div class="card-body px-5">
               <h3 class="fw-bold display-6 text-muted">The 11th ICGT</h3>
               <div class="text-muted">
@@ -990,11 +990,11 @@
           </div>
         </div>
 
-        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+        <div class="col-md-4 conference-item mb-3 position-relative">
           <div class="text-center">
             <img src="./assets/img/greentech2022 - persegi.jpg" alt="greentech2022.jpg" class="mb-3 rounded w-100">
           </div>
-          <div class="card position-absolute z-2 opacity-0 img-captions">
+          <div class="card position-absolute z-2 opacity-0 img-captions d-xl-block d-none">
             <div class="card-body px-5">
               <h3 class="fw-bold display-6 text-muted">The 12th ICGT</h3>
               <div class="text-muted">
@@ -1016,11 +1016,11 @@
           </div>
         </div>
 
-        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+        <div class="col-md-4 conference-item mb-3 position-relative">
           <div class="text-center">
             <img src="./assets/img/greentech2023 - persegi.jpeg" alt="greentech2023.jpeg" class="mb-3 rounded w-100">
           </div>
-          <div class="card position-absolute z-2 opacity-0 img-captions">
+          <div class="card position-absolute z-2 opacity-0 img-captions d-xl-block d-none">
             <div class="card-body px-5">
               <h3 class="fw-bold display-6 text-muted">The 13th ICGT</h3>
               <div class="text-muted">
@@ -1166,9 +1166,8 @@
     const modal = document.getElementById('viewImageModal');
     const modalImg = document.querySelector("#viewImageModal img");
 
-    document.querySelectorAll('#posts .col-lg-4').forEach(col => {
+    document.querySelectorAll('#posts .conference-item').forEach(col => {
       col.addEventListener('click', () => {
-        console.log('ok');
         modal.style.display = "block";
         setTimeout(() => {
           modal.style.opacity = "1";
