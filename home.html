@@ -9,23 +9,63 @@
   <link rel="shortcut icon" href="./assets/img/LOGO BULAT.png">
 
   <!-- Theme Color -->
-  <meta name="theme-color" content="#008080">
+  <meta name="theme-color" content="#002929">
   <!-- <meta name="theme-color" content="#0d6efd"> -->
   <style>
-    .carousel-item {
-      height: 80vh;
-    }
-
-    .carousel-item .carousel-item-bg {
-      height: 100%;
-      width: 100%;
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-position: center;
+    #jumbotron {
+      background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+        url(./assets/img/bg3.jpg);
       background-size: cover;
       background-attachment: fixed;
+      background-position: center;
+      min-height: 75vh;
+      color: white;
+    }
+
+    #speakers .card-body {
+      min-height: 325px;
+    }
+
+    #speakers .card {
+      transition: all 0.3s ease-in-out;
+    }
+
+    #speakers .card:hover {
+      box-shadow: var(--bs-box-shadow-lg);
+      transform: scale(1.05);
+    }
+
+    ::selection {
+      background-color: var(--bs-primary);
+      color: white;
+    }
+
+    .table>:not(caption)>*>* {
+      color: unset;
+    }
+
+    #workflow .card-body {
+      min-height: 350px;
+    }
+
+    #workflow .card {
+      transition: all 0.3s ease-in-out;
+      border: 1px solid var(--bs-primary);
+    }
+
+    ::-webkit-scrollbar {
+      height: .5rem;
+      width: .5rem;
+    }
+
+
+    ::-webkit-scrollbar-track {
+      background: white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--bs-primary);
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -45,9 +85,9 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="#myCarousel">Home</a>
+            <a class="nav-link" href="#jumbotron">Home</a>
             <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#features">Features</a>
+            <a class="nav-link" href="#speakers">Speakers</a>
             <a class="nav-link" href="#contact">Contact</a>
             <a class="nav-link" href="#testimonies">Testimonies</a>
             <a class="btn btn-primary" href="./login.html">Sign In</a>
@@ -59,95 +99,69 @@
   <!-- END OF NAVBAR -->
 
   <!-- CAROUSEL -->
-  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class=""></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="active"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class=""></button>
+  <section id="jumbotron" class="py-5 text-center d-flex align-items-center">
+    <div class="container">
+      <!-- <img src="./assets/img/LOGO_TRANSPARAN.png" alt="" class="img-fluid mb-3" style="width: 300px;"> -->
+      <h3 class="display-4">THE 14TH INTERNATIONAL CONFERENCE ON GREEN TECHNOLOGY (ICGT)</h3>
+      <div class="lead">
+        <h5 class="mb-5">"Emerging Green Technology: A Path Towards Resilient and
+          Sustainable Built Environment"</h5>
+        <h5>October 2024 - Hybrid Meeting</h5>
+        <h5 class="mb-5">Malang, Indonesia</h5>
+      </div>
+      <a href="#about" class="btn btn-primary mt-3 btn-lg">Learn More</a>
     </div>
-    <div class="carousel-inner">
-
-      <div class="carousel-item">
-        <div class="carousel-item-bg"
-          style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(./assets/img/bg2.jpg);">
-        </div>
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>SCOPE / SUB THEME</h1>
-            <ul class="mb-3">
-              <li>
-                <small>Science and Mathematics Toward Sustainable Living (Natural Science)</small>
-              </li>
-              <li>
-                <small>Sustainable Industrialization, Advance Material, and Foster Innovation (Engineering, Earth, and
-                  Information
-                  science)</small>
-              </li>
-              <li>
-                <small> Adaptive Technology for Energy Efficiency and Climate Change (Technology, Energy, and
-                  Environmental
-                  Science)</small>
-              </li>
-              <li>
-                <small>Sustainable Architecture and Cities (Architecture, Planning, and Environmental
-                  Engineering)</small>
-              </li>
-            </ul>
-            <p><a class="btn btn-lg btn-primary" href="#about">Learn More</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item active">
-        <div class="carousel-item-bg"
-          style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(./assets/img/bg1.jpg);">
-        </div>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>THE 14TH INTERNATIONAL CONFERENCE ON GREEN TECHNOLOGY (ICGT)</h1>
-            <p>"Emerging Green Technology: A Path Towards Resilient and
-              Sustainable Built Environment"</p>
-            <p>October 2024 - Hybrid Meeting</p>
-            <p>Malang, Indonesia</p>
-            <p><a class="btn btn-lg btn-primary" href="#myCarousel">Coming Soon</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item carousel-item-start">
-        <div class="carousel-item-bg"
-          style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url(./assets/img/bg3.jpg);">
-        </div>
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>INTERNATIONAL CONFERENCE ON GREEN TECHNOLOGY (ICGT)</h1>
-            <p class="opacity-75">An annual multidisciplinary meeting for cultivating and promoting
-              interactions between educators, scientists, engineers, and industry researchers in studying the
-              development of science & technology and related area.</p>
-            <p><a class="btn btn-lg btn-primary" href="./login.html">Sign Up Today</a></p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+  </section>
   <!-- END OF CAROUSEL -->
+
+  <!-- COUNTDOWN -->
+  <section id="countdown" class="bg-light py-5 text-primary">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-body text-muted">
+              <h1 class="display-1" id="days">0</h1>
+              <p>Days</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-body text-muted">
+              <h1 class="display-1" id="hours">0</h1>
+              <p>Hours</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-body text-muted">
+              <h1 class="display-1" id="minutes">0</h1>
+              <p>Minutes</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-body text-muted">
+              <h1 class="display-1" id="seconds">0</h1>
+              <p>Seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF COUNTDOWN -->
 
   <!-- ABOUT -->
   <section id="about" class="py-5">
     <div class="container">
-      <h3 class="display-4">About 14th ICGT 2024</h3>
-      <div class="row">
+      <div class="row flex-lg-row-reverse align-items-center text-muted">
         <div class="col-lg-6">
-          <p class="text-justify">
+          <h3 class="display-4 mb-5">About 14th ICGT 2024</h3>
+          <p class="text-justify text-muted">
             It is our pleasure to welcome you to the 2024 14th International Conference of Green Technology (ICGT 2024)
             in Malang, Indonesia. The ICGT is an annual multidisciplinary meeting for cultivating and promoting
             interactions between educators, scientists, engineers, and industry researchers in studying the development
@@ -156,14 +170,19 @@
             technology, engineering, and mathematics as isolated disciplines. Therefore, “Emerging Green Technology: A
             Path Towards Resilient and Sustainable Built Environment” become the theme of The 14th ICGT 2024.
           </p>
-          <p class="text-justify">The scientific programs consist of keynote lectures, plenary lectures, and invited
+          <!-- <p class="text-justify">The scientific programs consist of keynote lectures, plenary lectures, and invited
             lectures in parallel sessions covering a wide range of topics in STEM areas. A major goal of these
             conferences introduce students to learning and working in the STEM world, keep experts in the STEM field
             aware of current developments, and provide exchange their research results about most aspects of science and
             technology. We expected ICGT to play an important role in preparing all attendees to be leaders in STEM
-            fields and solve the current practical challenges encountered from various perspectives.</p>
+            fields and solve the current practical challenges encountered from various perspectives.</p> -->
+          <p><a href="#">Read more...</a></p>
         </div>
         <div class="col-lg-6">
+          <img src="./assets/img/menpro-01.png" alt="" class="img-fluid rounded mb-5">
+        </div>
+        <!-- <div class="col-lg-6">
+          <img src="./assets/img/conference.jpg" alt="" class="img-fluid rounded">
           <p class="text-justify">
             Faced with our new way of living, the 14th ICGT 2024 will be held fully hybrid on Malang, from October 1 and
             2, 2024. These hybrid conferences are held with a limited number of virtual participants and push for a
@@ -175,144 +194,573 @@
             presented at the conferences. The review process will take at most one month. The deadline for full paper
             submission will be on September 1, 2024, and the selected full paper will be published in the Conference
             Proceedings by IOP Conference Series: Earth and Environmental Science indexed by Scopus.
-          </p>
-        </div>
+          </p> -->
       </div>
+    </div>
     </div>
   </section>
   <!-- END OF ABOUT -->
 
-  <!-- COUNTDOWN -->
-  <section id="countdown" class="bg-light py-5">
+  <!-- SPEAKERS -->
+  <section id="speakers" class="py-5 bg-light">
     <div class="container">
-      <div class="row text-center">
-        <div class="col-md-3">
-          <h1 class="display-1" id="days">0</h1>
-          <p>Days</p>
+      <div class="row mb-5">
+        <h3 class="display-4 mb-5 text-primary text-center">Keynote Speakers</h3>
+        <div class="col-lg-4">
+          <div class="card mb-3">
+            <div class="card-body d-block d-lg-flex gap-2 align-items-center flex-lg-row">
+              <div class="mb-3 mb-lg-0" style="flex: 8;">
+                <h3>Prof. Gunawan Prayitno SP. MT. Ph.D</h3>
+                <p class="text-muted">Urban and Regional Planning Departement, Faculty of Engineering, Brawijaya
+                  University, Malang</p>
+                <span class="badge text-bg-primary">Indonesia</span>
+              </div>
+              <div class="text-center" style="flex: 4;">
+                <img src="./assets/img/Prof.-Gunawan-Prayitno-SP.-MT.-Ph.D-300x300.png" class="img-fluid mb-3">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-3">
-          <h1 class="display-1" id="hours">0</h1>
-          <p>Hours</p>
+        <div class="col-lg-4">
+          <div class="card mb-3">
+            <div class="card-body d-block d-lg-flex gap-2 align-items-center flex-lg-row">
+              <div class="mb-3 mb-lg-0" style="flex: 8;">
+                <h3>Ir. Agung Murti Nugroho, ST., MT., Ph.D, IPM</h3>
+                <p class="text-muted">Architecture Department, Faculty of Engineering, Brawijaya University, Malang</p>
+                <span class="badge text-bg-primary">Indonesia</span>
+              </div>
+              <div class="text-center" style="flex: 4;">
+                <img src="./assets/img/Ir.-Agung-Murti-Nugroho-ST.-MT.-Ph.D-IPM-300x300.png" class="img-fluid mb-3">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-3">
-          <h1 class="display-1" id="minutes">0</h1>
-          <p>Minutes</p>
+        <div class="col-lg-4">
+          <div class="card mb-3">
+            <div class="card-body d-block d-lg-flex gap-2 align-items-center flex-lg-row">
+              <div class="mb-3 mb-lg-0" style="flex: 8;">
+                <h3>Arie Dipareza Syafei, Dr.Eng, ST., MEPM</h3>
+                <p class="text-muted">Department of Environmental Engineering, Faculty of Civil Planning and Geo
+                  Engineering, ITS, Surabaya</p>
+                <span class="badge text-bg-primary">Indonesia</span>
+              </div>
+              <div class="text-center" style="flex: 4;">
+                <img src="./assets/img/Arie-Dipareza-Syafei-Dr.Eng-ST.-MEPM-300x300.png" class="img-fluid mb-3">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-3">
-          <h1 class="display-1" id="seconds">0</h1>
-          <p>Seconds</p>
+        <div class="col-lg-4">
+          <div class="card mb-3">
+            <div class="card-body d-block d-lg-flex gap-2 align-items-center flex-lg-row">
+              <div class="mb-3 mb-lg-0" style="flex: 8;">
+                <h3>Assoc. Prof. LAr. Dr. Nor Atiah Ismail</h3>
+                <p class="text-muted">Department of Landscape Architecture, Faculty of Design and Architecture,
+                  Universiti Putra</p>
+                <span class="badge text-bg-primary">Malaysia</span>
+              </div>
+              <div class="text-center" style="flex: 4;">
+                <img src="./assets/img/Assoc.-Prof.-LAr.-Dr.-Nor-Atiah-Ismail-300x300.png" class="img-fluid mb-3">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card mb-3">
+            <div class="card-body d-block d-lg-flex gap-2 align-items-center flex-lg-row">
+              <div class="mb-3 mb-lg-0" style="flex: 8;">
+                <h3>Asst. Prof. Sunaree Lawanyawatna</h3>
+                <p class="text-muted">School for Architecture and Design, King Mongkut's University of Technology
+                  Thonburi</p>
+                <span class="badge text-bg-primary">Thailand</span>
+              </div>
+              <div class="text-center" style="flex: 4;">
+                <img src="./assets/img/Asst.-Prof.-Sunaree-Lawanyawatna-300x300.png" class="img-fluid mb-3">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card mb-3">
+            <div class="card-body d-block d-lg-flex gap-2 align-items-center flex-lg-row">
+              <div class="mb-3 mb-lg-0" style="flex: 8;">
+                <h3>Prof. Dr. Boriana Mihailova</h3>
+                <p class="text-muted">Mineralogisch-Petrographisches Institut, Fakultät für Mathematik, Informatik und
+                  Naturwissenschaften, Universität Hamburg</p>
+                <span class="badge text-bg-primary">Germany</span>
+              </div>
+              <div class="text-center" style="flex: 4;">
+                <img src="./assets/img/Prof.-Dr.-Boriana-Mihailova-300x300.png" class="img-fluid mb-3">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- END OF COUNTDOWN -->
 
-  <!-- FEATURES -->
-  <section id="features" class="py-5">
-    <div class="container">
-      <h3 class="display-4">Features</h3>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="feature col">
-          <div
-            class="px-3 py-1 rounded d-inline-flex align-items-center justify-content-center text-bg-primary fs-2 mb-3">
-            <i class="bi bi-collection"></i>
+      <div class="row justify-content-center">
+        <h3 class="display-4 text-center mb-5 text-primary">Invited Speakers</h3>
+        <div class="col-lg-4">
+          <div class="card mb-3">
+            <div class="card-body d-block d-lg-flex gap-2 align-items-center flex-lg-row">
+
+            </div>
           </div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
-            probably just keep going until we run out of words.</p>
         </div>
-        <div class="feature col">
-          <div
-            class="px-3 py-1 rounded d-inline-flex align-items-center justify-content-center text-bg-primary fs-2 mb-3">
-            <i class="bi bi-people"></i>
+        <div class="col-lg-4">
+          <div class="card mb-3">
+            <div class="card-body d-block d-lg-flex gap-2 align-items-center flex-lg-row">
+              <div class="mb-3 mb-lg-0" style="flex: 8;">
+                <h3>Dr. Aulia Fikriarini Muchlis</h3>
+                <p class="text-muted">Department of Architecture Engineering, Faculty of Science and Technology, State
+                  Islamic University Maulana Malik Ibrahim Malang</p>
+                <span class="badge text-bg-primary">Indonesia</span>
+              </div>
+              <div class="text-center" style="flex: 4;">
+                <img src="./assets/img/Dr.-Aulia-Fikriarini-Muchlis-300x300.png" class="img-fluid mb-3">
+              </div>
+            </div>
           </div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
-            probably just keep going until we run out of words.</p>
         </div>
-        <div class="feature col">
-          <div
-            class="px-3 py-1 rounded d-inline-flex align-items-center justify-content-center text-bg-primary fs-2 mb-3">
-            <i class="bi bi-toggles2"></i>
+        <div class="col-lg-4">
+          <div class="card mb-3">
+            <div class="card-body d-block d-lg-flex gap-2 align-items-center flex-lg-row">
+
+            </div>
           </div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
-            probably just keep going until we run out of words.</p>
         </div>
       </div>
     </div>
   </section>
-  <!-- END OF FEATURES -->
+  <!-- END OF SPEAKERS -->
+
+  <!-- SCOPE -->
+  <section id="scope" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h3 class="display-4 mb-5 text-muted">Conference Scope</h3>
+          <ul class="list-group mb-5">
+            <li class="list-group-item list-group-item-action">
+              <h5 class="text-muted">
+                Natural Science
+              </h5>
+              <p class="text-muted">Science and Mathematics Toward Sustainable Living</p>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <h5 class="text-muted">
+                Engineering, Earth, and Information Science
+              </h5>
+              <p class="text-muted">Sustainable Industrialization, Advance Material, and Foster Innovation</p>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <h5 class="text-muted">
+                Technology, Energy, and Environmental Science
+              </h5>
+              <p class="text-muted"> Adaptive Technology for Energy Efficiency and Climate Change</p>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <h5 class="text-muted">
+                Architecture, Planning, and Environmental Engineering
+              </h5>
+              <p class="text-muted">Sustainable Architecture and Cities</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <img src="./assets/img/menpro-02.png" alt="Photo" class="img-fluid mb-5 m-lg-0 rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF SCOPE -->
+
+  <!-- IMPORTANT DATES -->
+  <section id="dates" class="py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col">
+          <h3 class="display-4 mb-5 text-primary text-center">Important Dates</h3>
+          <div class="card">
+            <div class="card-body">
+              <table class="table text-muted table-hover">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Event Descriptions</th>
+                    <th>Available On</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Extended Abstract Submission Deadline<br></td>
+                    <td>August, 1 - 20 2024</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Extended Abstract Notification</td>
+                    <td>August, 20 2024</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Early Bird Registration</td>
+                    <td>August, 20 - 25 2024</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Late Registration</td>
+                    <td>September, 15 2024</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Presentation Material Submission</td>
+                    <td>September, 25 - 28 2024</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Conference Dates</td>
+                    <td>October, 1- 2 2024</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Full Paper Submission Deadline</td>
+                    <td>October, 16 2024</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Full Paper Review</td>
+                    <td>October, 16 - November, 14 2024</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>LoA Proceeding ISSN &amp; Journal</td>
+                    <td>November, 15 2024</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Submission Acknowledgment for IOP Proceeding and Payment</td>
+                    <td>November, 15 - 21 2024</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF IMPORTANT DATES -->
+
+  <!-- PUBLICATION -->
+  <section id="publication" class="py-5">
+    <div class="container text-muted text-justify">
+      <h3 class="display-4 mb-5 text-center">Publication Rules</h3>
+      <div class="row">
+        <div class="col-lg-6">
+          <p>
+            Selected papers <strong>(with an additional publication fee)</strong> will be published in an
+            international
+            proceeding. Please note that it is crucial to follow the publication process according to the conference
+            system
+            procedures (including revising your paper according to the reviewer's comments, and submitting a revised
+            paper
+            before the deadline in the system) to get your paper published in the proceeding and please note that your
+            revised paper is the final version. The editors and the publication team may make
+            some
+            changes before the paper is sent to the publisher.
+          </p>
+          <p>
+            Selected papers from participants of the 14th International Conference on Green Technology (ICGT)
+            will be
+            published in the following proceeding and journals:
+          </p>
+          <ol>
+            <li><a href="https://publishingsupport.iopscience.iop.org/ees-forthcoming-volumes/">IOP Earth and
+                Environmental
+                Science</a> (Scopus Indexed). Follow <a
+                href="https://publishingsupport.iopscience.iop.org/author-guidelines-for-conference-proceedings/">author's
+                guidelines</a> and <a
+                href="https://cms.iopscience.iop.org/alfresco/d/d/workspace/SpacesStore/f67538ae-18b2-11e4-831a-29411a5deefe/WordGuidelines.zip">template</a>
+              when preparing your manuscript. <strong>The publication fee is IDR 2.300K (USD
+                160)</strong><strong>*</strong><strong>.</strong></li>
+            <li>Proceedings of the International Conference on Green Technology p-ISSN:&nbsp;<a
+                href="http://u.lipi.go.id/1499324727">2580-7080</a>&nbsp;| e-ISSN: <a
+                href="http://u.lipi.go.id/1492488213">2580-7099</a>. Use&nbsp;the<a
+                href="https://docs.google.com/document/d/1pB1LXaLrz8UkHCTA1yBdlhbtlu0HX7Gw/edit?usp=sharing&amp;ouid=111164733078765689077&amp;rtpof=true&amp;sd=true">&nbsp;<strong>template</strong></a>&nbsp;when
+              preparing the manuscript.</li>
+          </ol>
+        </div>
+        <div class="col-lg-6">
+          <ol start="3">
+            <li><u>JIA (Journal of Islamic Architecture)</u> ** (Scopus Indexed). Follow the author guideline Use
+              the<strong> <u>template</u> </strong>when preparing the manuscript. The publication fee is IDR 3.500K (USD
+              220).</li>
+            <li><a href="http://ejournal.uin-malang.ac.id/index.php/NEUTRINO/index">Jurnal Neutrino</a>: Jurnal Fisika
+              dan
+              Aplikasinya (Accredited SINTA-3) <a
+                href="https://drive.google.com/file/d/1GGkckssxq3ZHaNzJFQcfw3MsEWm1JLpS/view"><em>Download Neutrino
+                  template
+                  here</em></a>.</li>
+            <li><a href="http://ejournal.uin-malang.ac.id/index.php/Kimia">ALCHEMY</a>: Journal of Chemistry (Accredited
+              SINTA-3) <a
+                href="http://www.mediafire.com/file/hoohwqt1wn0306a/Template+Alchemy+Journal+of+Chemistry+2016+English.rtf"><em>Download
+                  ALCHEMY template here</em></a><em>.</em></li>
+            <li><a href="http://ejournal.uin-malang.ac.id/index.php/bio">El-Hayah</a><span>:
+                Journal
+                of Biology (Accredited SINTA-3) </span><a
+                href="https://drive.google.com/file/d/0BwpXexUYUAGQY0dGU0hTYXpRd0E/view"><em>Download El-Hayah template
+                  here</em></a><span>.</span></li>
+          </ol>
+          <p>*<strong> <em>Article Publication Charge (APC) is chargeable for articles accepted and declined by IOP
+                editors. </em></strong><em>Please submit the <u>publication agreement</u> using the conference
+              submission system.<br></em><em>**limited quota and only for appropriate articles
+              and within the <u>scope</u> of the Journal of Islamic Architecture</em><span>&nbsp;</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF PUBLICATION -->
+
+  <!-- WORKFLOW -->
+  <section id="workflow" class="py-5 bg-light">
+    <div class="container">
+      <h3 class="display-4 text-center text-primary mb-5">The Workflow</h3>
+      <hr class="mb-5 border-primary">
+      <div class="row flex-nowrap overflow-x-auto align-items-center gap-0">
+        <div class="col-9 col-lg-3">
+          <h3 class="mb-3 text-center">
+            <button class="btn btn-primary btn-lg">
+              <i class="bi bi-file-earmark"></i>
+            </button>
+          </h3>
+          <h5 class="text-center text-muted">
+            Abstract Submission
+            </h3>
+            <div class="card mb-5">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="text-muted text-center">
+                  Presenters register with the submission system to get the article code and account then submit their
+                  extended abstract using the submission system.
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="col-1 border-3 border-primary border-top text-center p-0">
+        </div>
+        <div class="col-9 col-lg-3">
+          <h3 class="mb-3 text-center">
+            <button class="btn btn-primary btn-lg">
+              <i class="bi bi-pencil"></i>
+            </button>
+          </h3>
+          <h5 class="text-center text-muted">
+            Editor Review
+            </h3>
+            <div class="card mb-5">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="text-muted text-center">
+                  The Committee will review the extended abstract (the relevance with the scope). The Accepted abstract
+                  will be announced on the website via the submission system, and the Committee will send the LOA via
+                  email to the Participants.
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="col-1 border-3 border-primary border-top text-center p-0">
+        </div>
+        <div class="col-9 col-lg-3">
+          <h3 class="mb-3 text-center">
+            <button class="btn btn-primary btn-lg">
+              <i class="bi bi-credit-card"></i>
+            </button>
+          </h3>
+          <h5 class="text-center text-muted">
+            Payment
+            </h3>
+            <div class="card mb-5">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="text-muted text-center">
+                  The presenter makes a contribution payment and uploads the payment receipt via the submission system.
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="col-1 border-3 border-primary border-top text-center p-0">
+        </div>
+        <div class="col-9 col-lg-3">
+          <h3 class="mb-3 text-center">
+            <button class="btn btn-primary btn-lg">
+              <i class="bi bi-display"></i>
+            </button>
+          </h3>
+          <h5 class="text-center text-muted">
+            Presentation
+            </h3>
+            <div class="card mb-5">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="text-muted text-center">
+                  The presenter uploads <a
+                    href="https://docs.google.com/presentation/d/1ES4c0MSnoZyJBaBZs7-PxjKlxpjc1OPB/edit?usp=sharing&amp;ouid=111662171596998431734&amp;rtpof=true&amp;sd=true"
+                    target="_blank" rel="noopener">presentation slides</a> via the submission system and delivers the
+                  presentation orally at the conference, either onsite or online.
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="col-1 border-3 border-primary border-top text-center p-0">
+        </div>
+        <div class="col-9 col-lg-3">
+          <h3 class="mb-3 text-center">
+            <button class="btn btn-primary btn-lg">
+              <i class="bi bi-clipboard2-check"></i>
+            </button>
+          </h3>
+          <h5 class="text-center text-muted">
+            Full Paper Submission
+            </h3>
+            <div class="card mb-5">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="text-muted text-center">
+                  Presenter submit their full manuscript via the submission system, and the full paper will be
+                  peer-reviewed via the submission system. For the IOP proceedings, each manuscript will need to be
+                  uploaded into the IOP article submission system to be reviewed by the IOP editor.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF WORKFLOW -->
+
+  <!-- COMITTEE -->
+  <section id="comittee" class="py-5">
+    <div class="container">
+      <h3 class="display-4 text-muted text-center">Scientific Committee</h3>
+    </div>
+  </section>
+  <!-- COMITTEE -->
 
   <!-- POSTS -->
   <section id="posts" class="py-5 bg-light">
     <div class="container">
-      <h3 class="display-4">Recent Posts</h3>
-      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5 flex-nowrap overflow-x-auto">
-
-        <div class="col-11 col-lg-5">
+      <h3 class="display-4 text-muted text-center mb-5">Previous Conference</h3>
+      <div class="row flex-nowrap overflow-x-auto">
+        <div class="col-11 col-lg-5 mb-3">
           <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg card-with-bg"
-            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/pexels-aditya-aiyar-1407305.jpg);">
+            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2015.jpg);">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3>
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"> The 6th ICGT</h3>
+              <p>INNOVATION IN ISLAMIC PERSPECTIVE FOR SUSTAINABLE DEVELOPMENT ACTION TOWARD INTERNATIONAL CHALLENGES
+              </p>
               <ul class="d-flex list-unstyled mt-auto">
-                <li class="me-auto">
-                  <img src="./assets/img/person-circle.svg" alt="Bootstrap" width="32" height="32"
-                    class="rounded-circle border border-white">
-                </li>
                 <li class="d-flex align-items-center me-3">
                   <i class="bi bi-geo-fill me-3"></i>
-                  <small>Earth</small>
+                  <small>UIN Maulana Malik Ibrahim Malang</small>
                 </li>
                 <li class="d-flex align-items-center">
                   <i class="bi bi-calendar3 me-3"></i>
-                  <small>3d</small>
+                  <small>2015</small>
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-11 col-lg-5">
+        <div class="col-11 col-lg-5 mb-3">
           <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg"
-            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/pexels-pixabay-208560.jpg);">
+            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2017.jpg);">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h3>
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">The 8th ICGT</h3>
+              <p>Empowering Basic Science Researches for Islamic Green Technology Development</p>
               <ul class="d-flex list-unstyled mt-auto">
-                <li class="me-auto">
-                  <img src="./assets/img/person-circle.svg" alt="Bootstrap" width="32" height="32"
-                    class="rounded-circle border border-white">
-                </li>
                 <li class="d-flex align-items-center me-3">
                   <i class="bi bi-geo-fill me-3"></i>
-                  <small>Pakistan</small>
+                  <small>UIN Maulana Malik Ibrahim Malang</small>
                 </li>
                 <li class="d-flex align-items-center">
                   <i class="bi bi-calendar3 me-3"></i>
-                  <small>4d</small>
+                  <small>2018</small>
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-11 col-lg-5">
+        <div class="col-11 col-lg-5 mb-3">
           <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg"
-            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/pexels-steve-johnson-845242.jpg);">
+            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2019.jpg);">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">The 10th ICGT</h3>
+              <p>Empowering the 4.0 Industrial Revolution through Green Science and Technology</p>
               <ul class="d-flex list-unstyled mt-auto">
-                <li class="me-auto">
-                  <img src="./assets/img/person-circle.svg" alt="Bootstrap" width="32" height="32"
-                    class="rounded-circle border border-white">
-                </li>
                 <li class="d-flex align-items-center me-3">
                   <i class="bi bi-geo-fill me-3"></i>
-                  <small>California</small>
+                  <small>Savana Hotel and Convention Malang</small>
                 </li>
                 <li class="d-flex align-items-center">
                   <i class="bi bi-calendar3 me-3"></i>
-                  <small>5d</small>
+                  <small>2019</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-11 col-lg-5 mb-3">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg"
+            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2019.jpg);">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">The 10th ICGT</h3>
+              <p>Empowering the 4.0 Industrial Revolution through Green Science and Technology</p>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="d-flex align-items-center me-3">
+                  <i class="bi bi-geo-fill me-3"></i>
+                  <small>Savana Hotel and Convention Malang</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bi bi-calendar3 me-3"></i>
+                  <small>2019</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-11 col-lg-5 mb-3">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg"
+            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2019.jpg);">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">The 10th ICGT</h3>
+              <p>Empowering the 4.0 Industrial Revolution through Green Science and Technology</p>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="d-flex align-items-center me-3">
+                  <i class="bi bi-geo-fill me-3"></i>
+                  <small>Savana Hotel and Convention Malang</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bi bi-calendar3 me-3"></i>
+                  <small>2019</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-11 col-lg-5 mb-3">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg"
+            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2019.jpg);">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">The 10th ICGT</h3>
+              <p>Empowering the 4.0 Industrial Revolution through Green Science and Technology</p>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="d-flex align-items-center me-3">
+                  <i class="bi bi-geo-fill me-3"></i>
+                  <small>Savana Hotel and Convention Malang</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bi bi-calendar3 me-3"></i>
+                  <small>2019</small>
                 </li>
               </ul>
             </div>
