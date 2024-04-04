@@ -30,7 +30,8 @@
       transition: all 0.3s ease-in-out;
     }
 
-    #speakers .card:hover {
+    #speakers .card:hover,
+    #workflow .card:hover {
       box-shadow: var(--bs-box-shadow-lg);
       transform: scale(1.05);
     }
@@ -67,6 +68,32 @@
       background-color: var(--bs-primary);
       border-radius: 10px;
     }
+
+    #posts .col-lg-4 .card {
+      opacity: 1 !important;
+      top: 50%;
+    }
+
+    #posts .col-lg-4:hover img {
+      transform: scale(0.825);
+    }
+
+    #posts .col-lg-4:hover .card {
+      transform: scale(0.9);
+    }
+
+    #posts .col-lg-4 {
+      cursor: pointer;
+    }
+
+    #posts .col-lg-4 img {
+      transform: scale(.75);
+    }
+
+    #posts img,
+    #posts .card {
+      transition: all 0.3s ease-in-out;
+    }
   </style>
 </head>
 
@@ -77,7 +104,7 @@
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top shadow" id="navbar">
       <div class="container">
         <a class="navbar-brand" href="./home.html">
-          <img src="./assets/img/LOGO_PANJANG.png" alt="" height="50" class="d-inline-block align-text-top">
+          <img src="./assets/img/LOGO_TRANSPARAN.png" alt="" height="50" class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,8 +115,14 @@
             <a class="nav-link" href="#jumbotron">Home</a>
             <a class="nav-link" href="#about">About</a>
             <a class="nav-link" href="#speakers">Speakers</a>
+            <a class="nav-link" href="#scopes">Scopes</a>
+            <a class="nav-link" href="#dates">Events</a>
+            <a class="nav-link" href="#publication">Publication</a>
+            <a class="nav-link" href="#workflow">Workflow</a>
+            <a class="nav-link" href="#comittee">Comittee</a>
+            <a class="nav-link" href="#fee">Fee</a>
+            <a class="nav-link" href="#submissions">Submissions</a>
             <a class="nav-link" href="#contact">Contact</a>
-            <a class="nav-link" href="#testimonies">Testimonies</a>
             <a class="btn btn-primary" href="./login.html">Sign In</a>
           </div>
         </div>
@@ -300,7 +333,8 @@
       <div class="row justify-content-center">
         <h3 class="display-4 text-center mb-5 text-primary">Invited Speakers</h3>
         <div class="col-lg-4">
-          <div class="card mb-3">
+          <div class="card mb-3 d-none d-lg-block"
+            style="background-image: url(./assets/img/pattern.png);background-position: center;background-size: cover;">
             <div class="card-body d-block d-lg-flex gap-2 align-items-center flex-lg-row">
 
             </div>
@@ -322,7 +356,8 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="card mb-3">
+          <div class="card mb-3 d-none d-lg-block"
+            style="background-image: url(./assets/img/pattern.png);background-position: center;background-size: cover;">
             <div class="card-body d-block d-lg-flex gap-2 align-items-center flex-lg-row">
 
             </div>
@@ -334,7 +369,7 @@
   <!-- END OF SPEAKERS -->
 
   <!-- SCOPE -->
-  <section id="scope" class="py-5">
+  <section id="scopes" class="py-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
@@ -454,7 +489,7 @@
   <!-- PUBLICATION -->
   <section id="publication" class="py-5">
     <div class="container text-muted text-justify">
-      <h3 class="display-4 mb-5 text-center">Publication Rules</h3>
+      <h3 class="display-4 mb-5 text-center">Publication</h3>
       <div class="row">
         <div class="col-lg-6">
           <p>
@@ -524,7 +559,7 @@
   <!-- WORKFLOW -->
   <section id="workflow" class="py-5 bg-light">
     <div class="container">
-      <h3 class="display-4 text-center text-primary mb-5">The Workflow</h3>
+      <h3 class="display-4 text-center text-primary mb-5">Conference Workflow</h3>
       <hr class="mb-5 border-primary">
       <div class="row flex-nowrap overflow-x-auto align-items-center gap-0">
         <div class="col-9 col-lg-3">
@@ -545,7 +580,8 @@
               </div>
             </div>
         </div>
-        <div class="col-1 border-3 border-primary border-top text-center p-0">
+        <div class="col-1 text-center p-0">
+          <i class="bi bi-arrow-right text-primary fs-1"></i>
         </div>
         <div class="col-9 col-lg-3">
           <h3 class="mb-3 text-center">
@@ -566,7 +602,8 @@
               </div>
             </div>
         </div>
-        <div class="col-1 border-3 border-primary border-top text-center p-0">
+        <div class="col-1 text-center p-0">
+          <i class="bi bi-arrow-right text-primary fs-1"></i>
         </div>
         <div class="col-9 col-lg-3">
           <h3 class="mb-3 text-center">
@@ -585,7 +622,8 @@
               </div>
             </div>
         </div>
-        <div class="col-1 border-3 border-primary border-top text-center p-0">
+        <div class="col-1 text-center p-0">
+          <i class="bi bi-arrow-right text-primary fs-1"></i>
         </div>
         <div class="col-9 col-lg-3">
           <h3 class="mb-3 text-center">
@@ -607,7 +645,8 @@
               </div>
             </div>
         </div>
-        <div class="col-1 border-3 border-primary border-top text-center p-0">
+        <div class="col-1 text-center p-0">
+          <i class="bi bi-arrow-right text-primary fs-1"></i>
         </div>
         <div class="col-9 col-lg-3">
           <h3 class="mb-3 text-center">
@@ -635,134 +674,375 @@
 
   <!-- COMITTEE -->
   <section id="comittee" class="py-5">
-    <div class="container">
-      <h3 class="display-4 text-muted text-center">Scientific Committee</h3>
+    <div class="container text-muted">
+      <h3 class="display-4 text-center mb-5">Scientific Committee</h3>
+      <div class="row">
+        <div class="col-lg-6">
+          <h5>Editor</h5>
+          <ul class="mb-3 text-justify">
+            <li>Prof. Ueki (Hiroshima University, Japan)</li>
+            <li>Dr. Panupong Tamachoti (Chulalongkorn University, Bangkok, Thailand)</li>
+            <li>Dr. Anton Prasetyo, M.Si (State Islamic University Maulana Malik Ibrahim Malang, Indonesia)</li>
+            <li>Dr. Ajeng Kusumaningtyas Pramono (Gifu University, Japan)</li>
+            <li>Dr. Erna Hastuti, M.Si (State Islamic University Maulana Malik Ibrahim Malang, Indonesia)</li>
+            <li>Dr. Agus Subaqin, M.T. (State Islamic University Maulana Malik Ibrahim Malang, Indonesia)</li>
+          </ul>
+          <h5>Reviewer</h5>
+          <ul class="text-justify">
+            <li>Assoc. Prof. LAr. Dr. Nor Atiah Ismail (Universiti Putra Malaysia, Malaysia)</li>
+            <li>Prof. Agung Sedayu, M.T (State Islamic University Maulana Malik Ibrahim Malang, Indonesia)</li>
+            <li>Prof. Ulfah Utami, M.Si (State Islamic University Maulana Malik Ibrahim Malang, Indonesia)</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <ul class="text-justify">
+            <li>Prof. Dr. Bayyinatul Muchtaromah, M.Si (State Islamic University Maulana Malik Ibrahim Malang,
+              Indonesia)</li>
+            <li>Dr. Imam Tazi , M.Si (State Islamic University Maulana Malik Ibrahim Malang, Indonesia)</li>
+            <li>Dr. Fachrul Kurniawan, M.Si (State Islamic University Maulana Malik Ibrahim Malang, Indonesia)</li>
+            <li>Dr. Elly Susanti, M.Sc (State Islamic University Maulana Malik Ibrahim Malang, Indonesia)</li>
+            <li>Dr. Aulia Fikriarini Muchlis, M.T. (State Islamic University Maulana Malik Ibrahim Malang, Indonesia)
+            </li>
+            <li>Dr. Mokhamad Amin Hariyadi, M.T. (State Islamic University Maulana Malik Ibrahim Malang, Indonesia)</li>
+            <li>FX.Teddy Badai Samodra, ST., MT., Ph,D (Institut Teknologi Sepuluh Nopember, Indonesia)</li>
+            <li>Ir. Agung Murti Nugroho, ST., M.T., Ph,D (Brawijaya University, Indonesia)</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
   <!-- COMITTEE -->
 
+  <!-- FEE -->
+  <section id="fee" class="py-5 bg-light">
+    <div class="container">
+      <h3 class="display-4 mb-5 text-center text-primary">Conference Fee</h3>
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Participant Type
+                  </th>
+                  <th>Early Bird</th>
+                  <th>Regular</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Online Presenter</td>
+                  <td>
+                    <p>LOCAL: IDR 400K</p>
+                    <p>INTERNATIONAL: USD 50</p>
+                  </td>
+                  <td>
+                    <p>LOCAL: IDR 450K</p>
+                    <p>INTERNATIONAL: USD 55</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>On Site Presenter</td>
+                  <td>
+                    <p>LOCAL: IDR 750K</p>
+                    <p>INTERNATIONAL: USD 100</p>
+                    STUDENT:
+                    <ul>
+                      <li>Under graduate: IDR 500 K</li>
+                      <li>Master and doctoral: IDR 750K</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <p>LOCAL: IDR 900K</p>
+                    <p>INTERNATIONAL: USD 120</p>
+                    STUDENT:
+                    <ul>
+                      <li>Under graduate: IDR 550K</li>
+                      <li>Master and doctoral student IDR 800K</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Listener</td>
+                  <td>
+                    <p>LOCAL: IDR 750K</p>
+                    <p>INTERNATIONAL: USD 100</p>
+                  </td>
+                  <td>
+                    <p>LOCAL: IDR 800K</p>
+                    <p>INTERNATIONAL: USD 105</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF FEE -->
+
+  <!-- SUBMISSIONS -->
+  <section id="submissions" class="py-5">
+    <div class="container text-muted">
+      <h3 class="display-4 text-center mb-5">Submissions</h3>
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="text-justify">To submit an extended abstract, you are <strong>required to submit the abstract
+              first</strong>. After the admin
+            grants approval within <strong>1-2 day</strong><strong>s</strong>, you can proceed to <strong>submit the
+              extended abstract under the </strong><strong>Extended Abstract Upload Document menu</strong>.</p>
+          </p>
+          <h5>Abstract Submission</h5>
+          <ol class="text-justify mb-3">
+            <li>To submit an abstract, you must <strong>register</strong> to the conference by creating an account
+              through the system. Please create an account by clicking <a
+                href="http://gcms.uin-malang.ac.id/"><strong>REGISTER</strong></a>&nbsp;and submit your abstract.</li>
+            <li>The abstract submission form contains Title, author names, email, affiliation, keyword, and abstract
+              body.</li>
+            <li>The abstract must be written in English,&nbsp; including the introduction, the aim of the study,
+              methods, results, and the conclusion.</li>
+            <li>The Title should be no longer than 16 Words.</li>
+            <li>The abstract should be no longer than 200 words.</li>
+            <li>The keywords are 3 to 5 words, written in alphabetical order.</li>
+            <li>See the <a
+                href="http://greentech.uin-malang.ac.id/wp-content/uploads/2023/09/PARTICIPANT-GUIDE.pdf">participant
+                guide</a> when submitting and revising the abstract.</li>
+          </ol>
+          <p class="text-justify">After the editor approves the scope within 1-2 days, you can <strong>submit the
+              extended
+              abstract under the
+              Extended Abstract Upload Document menu.</strong></p>
+          <h5>Extended Abstract Submission</h5>
+          <ol class="text-justify">
+            <li>Extended abstract must be written in English and according to&nbsp;<a
+                href="https://sbcc.upi.edu/2024/info/download"><strong>EXTENDED ABSTRACT
+                  TEMPLATE</strong></a><strong>.</strong></li>
+            <li>Extended abstract must contain the following structure: <strong>Title, introduction, material and
+                methods, results and discussion, conclusion and references</strong>.</li>
+            <li>Extended abstract/s should be submitted only <strong>after the abstracts are </strong><strong>ACCEPTED
+                by the editor</strong><strong>.</strong></li>
+            <li>Extended abstract/s must be revised according to reviewer's comments.</li>
+            <li>Extended abstract&nbsp;revision must be submitted through the system (author's account).</li>
+            <li>Extended abstract must consist of 4-5 Pages only.</li>
+            <li>The author's instructions and extended abstract template can be downloaded from the&nbsp;<a
+                href="https://sbcc.upi.edu/2024/info/download"><strong>download page</strong></a>.</li>
+          </ol>
+        </div>
+        <div class="col-lg-6">
+          <h6>Note :</h6>
+          <ul class="text-justify">
+            <li>The whole submission process is done fully online (NOT by email) to guarantee smooth administration.
+            </li>
+            <li>We allow up to 2 papers per author (including as a co-author) unless there is a legitimate reason to
+              include more.</li>
+          </ul>
+          <h5>Presentation Submission</h5>
+          <ul class="text-justify">
+            <li>Please notice that <strong>submitting/uploading the powerpoint (PPT) presentation file is mandatory for
+                all presenters</strong>. Presenters who do not upload their powerpoint will not get the e-certificate.
+            </li>
+            <li>To submit your powerpoint presentation file (PPT), please&nbsp;<strong>login</strong>first to your
+              account. Go to&nbsp;<strong>'Presentation Material'</strong>&nbsp;menu and You will
+              find&nbsp;<strong>'Presentation File'</strong>&nbsp;menu on the the page, and&nbsp;<strong>click
+                'Upload'</strong>&nbsp;to upload your powerpoint (PPT). Please&nbsp;<strong>upload the PDF version
+                (.pdf) </strong>maximum 5Mb<strong> of your powerpoint presentation file (NOT .ppt or .pptx)</strong>.
+            </li>
+            <li>The powerpoint should be between <strong>7-8 slides</strong><span>,&nbsp;</span><strong>written in
+                English</strong><span>&nbsp;</span><strong>using IEEE&nbsp;</strong><span>citation style. Please
+                download and use the&nbsp;first slide&nbsp;template
+                for&nbsp;conference&nbsp;theme and logos&nbsp;</span><a
+                href="https://drive.google.com/drive/folders/1ISiJuFY33TQG_EaQ3lu5wi0gdANdQFnI?usp=sharing"><strong>here</strong>.</a><span>&nbsp;</span><a
+                href="https://drive.google.com/drive/folders/1ISiJuFY33TQG_EaQ3lu5wi0gdANdQFnI?usp=sharing"><strong>Powerpoint
+                  Template</strong></a><strong>.</strong></li>
+            <li>Please follow the following&nbsp;<strong>powerpoint structure</strong>:</li>
+            <li style="list-style-type: none;">
+              <ol>
+                <li>First slide: Title, Author(s), Affiliation(s).</li>
+                <li>Slide 2-3: Introduction &amp; Literature Review</li>
+                <li>Slide 4: Method</li>
+                <li>Slide 5-6: Results and Discussion</li>
+                <li>Slide 7: Conclusion</li>
+                <li>Slide 8: References</li>
+              </ol>
+            </li>
+            <li>Do not overcrowd the slides with too many text. Keep text to a minimum (6-8 lines per slide). The bullet
+              points should be headlines, not paragraphs. Write in sentence fragments using key words, and keep your
+              font size 24 or bigger.</li>
+            <li>Make sure your powerpoint is easy on the eyes. Stay away from weird colors and busy backgrounds. Use
+              easy-to-read fonts such as Arial and Calibri.</li>
+            <li><span>Proofread to avoid misspelling of names or words.</span></li>
+            <li>To the provided space on your user account <strong>(<a href="https://forms.gle/eKf6F9PX45k5GYek7"
+                  target="_blank" rel="noopener">see further instructions
+                  below</a>).</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF SUBMISSIONS -->
+
   <!-- POSTS -->
   <section id="posts" class="py-5 bg-light">
     <div class="container">
-      <h3 class="display-4 text-muted text-center mb-5">Previous Conference</h3>
-      <div class="row flex-nowrap overflow-x-auto">
-        <div class="col-11 col-lg-5 mb-3">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg card-with-bg"
-            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2015.jpg);">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"> The 6th ICGT</h3>
-              <p>INNOVATION IN ISLAMIC PERSPECTIVE FOR SUSTAINABLE DEVELOPMENT ACTION TOWARD INTERNATIONAL CHALLENGES
-              </p>
-              <ul class="d-flex list-unstyled mt-auto">
-                <li class="d-flex align-items-center me-3">
-                  <i class="bi bi-geo-fill me-3"></i>
-                  <small>UIN Maulana Malik Ibrahim Malang</small>
-                </li>
-                <li class="d-flex align-items-center">
-                  <i class="bi bi-calendar3 me-3"></i>
-                  <small>2015</small>
-                </li>
-              </ul>
+      <h3 class="display-4 text-muted text-center">Previous Conferences</h3>
+      <div class="row">
+
+        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+          <div class="text-center">
+            <img src="./assets/img/greentech2015 - persegi.jpg" alt="greentech2015.jpg" class="mb-3 rounded w-100">
+          </div>
+          <div class="card position-absolute z-2 opacity-0 img-captions">
+            <div class="card-body px-5">
+              <h3 class="fw-bold display-6 text-muted">The 8th ICGT</h3>
+              <div class="text-muted">
+                <p class="text-uppercase">INNOVATION IN ISLAMIC PERSPECTIVE FOR SUSTAINABLE DEVELOPMENT ACTION TOWARD
+                  INTERNATIONAL CHALLENGES
+                </p>
+                <ul class="d-flex list-unstyled mt-auto justify-content-between">
+                  <li class="d-flex align-items-center me-3">
+                    <i class="bi bi-geo-fill me-3"></i>
+                    <small>UIN Maulana Malik Ibrahim Malang</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-calendar3 me-3"></i>
+                    <small>2015</small>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-11 col-lg-5 mb-3">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg"
-            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2017.jpg);">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">The 8th ICGT</h3>
-              <p>Empowering Basic Science Researches for Islamic Green Technology Development</p>
-              <ul class="d-flex list-unstyled mt-auto">
-                <li class="d-flex align-items-center me-3">
-                  <i class="bi bi-geo-fill me-3"></i>
-                  <small>UIN Maulana Malik Ibrahim Malang</small>
-                </li>
-                <li class="d-flex align-items-center">
-                  <i class="bi bi-calendar3 me-3"></i>
-                  <small>2018</small>
-                </li>
-              </ul>
+        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+          <div class="text-center">
+            <img src="./assets/img/greentech2017 - persegi.jpg" alt="greentech2017.jpg" class="mb-3 rounded w-100">
+          </div>
+          <div class="card position-absolute z-2 opacity-0 img-captions">
+            <div class="card-body px-5">
+              <h3 class="fw-bold display-6 text-muted">The 6th ICGT</h3>
+              <div class="text-muted">
+                <p class="text-uppercase">Empowering Basic Science Researches for Islamic Green Technology Development
+                </p>
+                <ul class="d-flex list-unstyled mt-auto justify-content-between">
+                  <li class="d-flex align-items-center me-3">
+                    <i class="bi bi-geo-fill me-3"></i>
+                    <small>UIN Maulana Malik Ibrahim Malang</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-calendar3 me-3"></i>
+                    <small>2018</small>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-11 col-lg-5 mb-3">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg"
-            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2019.jpg);">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">The 10th ICGT</h3>
-              <p>Empowering the 4.0 Industrial Revolution through Green Science and Technology</p>
-              <ul class="d-flex list-unstyled mt-auto">
-                <li class="d-flex align-items-center me-3">
-                  <i class="bi bi-geo-fill me-3"></i>
-                  <small>Savana Hotel and Convention Malang</small>
-                </li>
-                <li class="d-flex align-items-center">
-                  <i class="bi bi-calendar3 me-3"></i>
-                  <small>2019</small>
-                </li>
-              </ul>
+        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+          <div class="text-center">
+            <img src="./assets/img/greentech2019 - persegi.jpg" alt="greentech2019.jpg" class="mb-3 rounded w-100">
+          </div>
+          <div class="card position-absolute z-2 opacity-0 img-captions">
+            <div class="card-body px-5">
+              <h3 class="fw-bold display-6 text-muted">The 10th ICGT</h3>
+              <div class="text-muted">
+                <p class="text-uppercase">Empowering the 4.0 Industrial Revolution through Green Science and Technology
+                </p>
+                <ul class="d-flex list-unstyled mt-auto justify-content-between">
+                  <li class="d-flex align-items-center me-3">
+                    <i class="bi bi-geo-fill me-3"></i>
+                    <small>Savana Hotel and Convention Malang</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-calendar3 me-3"></i>
+                    <small>2019</small>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-11 col-lg-5 mb-3">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg"
-            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2019.jpg);">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">The 10th ICGT</h3>
-              <p>Empowering the 4.0 Industrial Revolution through Green Science and Technology</p>
-              <ul class="d-flex list-unstyled mt-auto">
-                <li class="d-flex align-items-center me-3">
-                  <i class="bi bi-geo-fill me-3"></i>
-                  <small>Savana Hotel and Convention Malang</small>
-                </li>
-                <li class="d-flex align-items-center">
-                  <i class="bi bi-calendar3 me-3"></i>
-                  <small>2019</small>
-                </li>
-              </ul>
+        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+          <div class="text-center">
+            <img src="./assets/img/greentech2021 - persegi.jpeg" alt="greentech2021.jpeg" class="mb-3 rounded w-100">
+          </div>
+          <div class="card position-absolute z-2 opacity-0 img-captions">
+            <div class="card-body px-5">
+              <h3 class="fw-bold display-6 text-muted">The 11th ICGT</h3>
+              <div class="text-muted">
+                <p class="text-uppercase">
+                  OPTIMIZING TECHNOLOGY FOR SUSTAINING PRODUCTIVITY <br>DURING COVID-19
+                </p>
+                <ul class="d-flex list-unstyled mt-auto justify-content-between">
+                  <li class="d-flex align-items-center me-3">
+                    <i class="bi bi-geo-fill me-3"></i>
+                    <small>Zoom <br> Teleconference</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-calendar3 me-3"></i>
+                    <small>2021</small>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-11 col-lg-5 mb-3">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg"
-            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2019.jpg);">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">The 10th ICGT</h3>
-              <p>Empowering the 4.0 Industrial Revolution through Green Science and Technology</p>
-              <ul class="d-flex list-unstyled mt-auto">
-                <li class="d-flex align-items-center me-3">
-                  <i class="bi bi-geo-fill me-3"></i>
-                  <small>Savana Hotel and Convention Malang</small>
-                </li>
-                <li class="d-flex align-items-center">
-                  <i class="bi bi-calendar3 me-3"></i>
-                  <small>2019</small>
-                </li>
-              </ul>
+        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+          <div class="text-center">
+            <img src="./assets/img/greentech2022 - persegi.jpg" alt="greentech2022.jpg" class="mb-3 rounded w-100">
+          </div>
+          <div class="card position-absolute z-2 opacity-0 img-captions">
+            <div class="card-body px-5">
+              <h3 class="fw-bold display-6 text-muted">The 12th ICGT</h3>
+              <div class="text-muted">
+                <p class="text-uppercase">
+                  Empowering innovative science and technology for future environmental perspective
+                </p>
+                <ul class="d-flex list-unstyled mt-auto justify-content-between">
+                  <li class="d-flex align-items-center me-3">
+                    <i class="bi bi-geo-fill me-3"></i>
+                    <small>Savana Hotel and Convention Malang</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-calendar3 me-3"></i>
+                    <small>2022</small>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-11 col-lg-5 mb-3">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg card-with-bg"
-            style="background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./assets/img/greentech2019.jpg);">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">The 10th ICGT</h3>
-              <p>Empowering the 4.0 Industrial Revolution through Green Science and Technology</p>
-              <ul class="d-flex list-unstyled mt-auto">
-                <li class="d-flex align-items-center me-3">
-                  <i class="bi bi-geo-fill me-3"></i>
-                  <small>Savana Hotel and Convention Malang</small>
-                </li>
-                <li class="d-flex align-items-center">
-                  <i class="bi bi-calendar3 me-3"></i>
-                  <small>2019</small>
-                </li>
-              </ul>
+        <div class="col-lg-4 mb-5 mb-lg-3 position-relative">
+          <div class="text-center">
+            <img src="./assets/img/greentech2023 - persegi.jpeg" alt="greentech2023.jpeg" class="mb-3 rounded w-100">
+          </div>
+          <div class="card position-absolute z-2 opacity-0 img-captions">
+            <div class="card-body px-5">
+              <h3 class="fw-bold display-6 text-muted">The 13th ICGT</h3>
+              <div class="text-muted">
+                <p class="text-uppercase">
+                  Strengthening The Impact of STEM (Science Technology Engineering and Mathemathics) for Sustainable
+                  Future
+                </p>
+                <ul class="d-flex list-unstyled mt-auto justify-content-between">
+                  <li class="d-flex align-items-center me-3">
+                    <i class="bi bi-geo-fill me-3"></i>
+                    <small>Ijen Suites Resort and Convention</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-calendar3 me-3"></i>
+                    <small>2023</small>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -775,161 +1055,144 @@
   <!-- CONTACT -->
   <section id="contact" class="py-5">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-3">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d505750.1739981809!2d112.61562200000002!3d-7.981038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78829f3df808a9%3A0x7cc4e7b0b274a5d7!2sIjen%20Suites%20Resort%20%26%20Convention%20Malang!5e0!3m2!1sid!2sus!4v1711882181630!5m2!1sid!2sus"
-            style="border:0;width: 100%;" class="rounded" height="500" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+      <h3 class="display-4 mb-5 text-center text-muted">Contact Us</h3>
+      <div class="row flex-lg-row-reverse text-muted align-items-center">
         <div class="col-lg-6">
-          <h3 class="display-4">Contact Us</h3>
-          <form action="" method="post">
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="10" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-          </form>
+          <h3>Persons</h3>
+          <ul class="mb-3">
+            <li><a href="http://wa.me/6285655544977" target="_blank">Ana Ziyadatul Husna, M.Ars</a>
+            </li>
+            <li><a href="http://wa.me/628990477307" target="_blank">Angga Perdana, M. Ars</a></li>
+          </ul>
+          <h3>Payment</h3>
+          <p>All payment should be transferred to:</p>
+          <table class="w-100 mb-5">
+            <tbody>
+              <tr>
+                <td>
+                  Bank Name
+                </td>
+                <td> : </td>
+                <td>Bank Rakyat Indonesia</td>
+              </tr>
+              <tr>
+                <td>
+                  Account Number
+                </td>
+                <td> : </td>
+                <td>057701010458502</td>
+              </tr>
+              <tr>
+                <td>
+                  Account Name
+                </td>
+                <td> : </td>
+                <td>Angga Perdana</td>
+              </tr>
+            </tbody>
+          </table>
+          <img src="./assets/img/bri-logo.png" alt="LOGO BRI" class="img-fluid mb-3">
+        </div>
+        <div class="col-lg-6 mb-3">
+          <h3>Venue</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1975.7256563110893!2d112.60493378854807!3d-7.952225248018047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78836798cb0b17%3A0x52f15a858f4a4a06!2sFakultas%20Sains%20dan%20Teknologi%20-%20UIN%20Malang!5e0!3m2!1sid!2sus!4v1712247670056!5m2!1sid!2sus"
+            style="border:0;width: 100%;" class="rounded" height="400" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
   </section>
   <!-- END OF CONTACT -->
 
-  <!-- TESTIMONIES -->
-  <section id="testimonies" class="bg-light py-5">
-    <div class="container">
-      <h3 class="display-4">Testimonies</h3>
-      <div class="row flex-nowrap overflow-x-auto">
-        <div class="col-11 col-lg-5 mb-3">
-          <div class="card mb-3">
-            <div class="card-body p-5">
-              <h5 class="card-title">Always Up to Date</h5>
-              <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus aliquid
-                repellat magnam modi
-                assumenda nam, hic nesciunt deserunt vitae explicabo ut esse beatae quo placeat totam optio expedita
-                corporis.</p>
-              <div class="d-flex">
-                <img src="./assets/img/person-circle.svg" alt="Bootstrap" width="32" height="32"
-                  class="rounded-circle border border-primary">
-                <div class="ms-3">
-                  <h6 class="m-0">John Doe</h6>
-                  <p class="m-0 text-muted">Full-Stack Developer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3">
-            <div class="card-body p-5">
-              <h5 class="card-title">Always Up to Date</h5>
-              <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus aliquid
-                repellat magnam modi.</p>
-              <div class="d-flex">
-                <img src="./assets/img/person-circle.svg" alt="Bootstrap" width="32" height="32"
-                  class="rounded-circle border border-primary">
-                <div class="ms-3">
-                  <h6 class="m-0">John Doe</h6>
-                  <p class="m-0 text-muted">Full-Stack Developer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-11 col-lg-5 mb-3">
-          <div class="card mb-3">
-            <div class="card-body p-5">
-              <h5 class="card-title">Always Up to Date</h5>
-              <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus aliquid
-                repellat magnam modi.</p>
-              <div class="d-flex">
-                <img src="./assets/img/person-circle.svg" alt="Bootstrap" width="32" height="32"
-                  class="rounded-circle border border-primary">
-                <div class="ms-3">
-                  <h6 class="m-0">John Doe</h6>
-                  <p class="m-0 text-muted">Full-Stack Developer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3">
-            <div class="card-body p-5">
-              <h5 class="card-title">Always Up to Date</h5>
-              <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus aliquid
-                repellat magnam modi
-                assumenda nam, hic nesciunt deserunt vitae explicabo ut esse beatae quo placeat totam optio expedita
-                corporis.</p>
-              <div class="d-flex">
-                <img src="./assets/img/person-circle.svg" alt="Bootstrap" width="32" height="32"
-                  class="rounded-circle border border-primary">
-                <div class="ms-3">
-                  <h6 class="m-0">John Doe</h6>
-                  <p class="m-0 text-muted">Full-Stack Developer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-11 col-lg-5 mb-3">
-          <div class="card mb-3">
-            <div class="card-body p-5">
-              <h5 class="card-title">Always Up to Date</h5>
-              <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus aliquid
-                repellat magnam modi
-                assumenda nam, hic nesciunt deserunt vitae explicabo ut esse beatae quo placeat totam optio expedita
-                corporis.</p>
-              <div class="d-flex">
-                <img src="./assets/img/person-circle.svg" alt="Bootstrap" width="32" height="32"
-                  class="rounded-circle border border-primary">
-                <div class="ms-3">
-                  <h6 class="m-0">John Doe</h6>
-                  <p class="m-0 text-muted">Full-Stack Developer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3">
-            <div class="card-body p-5">
-              <h5 class="card-title">Always Up to Date</h5>
-              <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus aliquid
-                repellat magnam modi.</p>
-              <div class="d-flex">
-                <img src="./assets/img/person-circle.svg" alt="Bootstrap" width="32" height="32"
-                  class="rounded-circle border border-primary">
-                <div class="ms-3">
-                  <h6 class="m-0">John Doe</h6>
-                  <p class="m-0 text-muted">Full-Stack Developer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
-  <!-- END OF TESTIMONIES -->
-
   <!-- FOOTER -->
-  <footer class="bg-dark text-white py-3">
-    <p class="text-center m-0">© 2024 Insuladev Official. All rights reserved.</p>
-  </footer>
+  <section id="footer" class="text-bg-dark py-5">
+    <div class="container">
+      <footer class="row gap-5">
+
+        <div class="col mb-3">
+          <img src="./assets/img/logo-saintek-putih-1-300x82.png" alt="LOGO SAINTEK" class="img-fluid mb-3">
+          <p class="text-body-secondary">© 2024. All Rights Reserved.</p>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <p><a href="#home" class="text-white">Home</a></p>
+          <p><a href="#about" class="text-white">About</a></p>
+          <p><a class="text-white" href="#speakers">Speakers</a></p>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <p><a class="text-white" href="#scopes">Scopes</a></p>
+          <p><a class="text-white" href="#dates">Events</a></p>
+          <p><a href="#publication" class="text-white">Publication</a></p>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <p><a href="#workflow" class="text-white">Workflow</a></p>
+          <p><a href="#comittee" class="text-white">Comittee</a></p>
+          <p><a href="#fee" class="text-white">Fee</a></p>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <p><a href="#submissions" class="text-white">Submissions</a></p>
+          <p><a href="#contact" class="text-white">Contact</a></p>
+        </div>
+
+      </footer>
+    </div>
+  </section>
   <!-- END OF FOOTER -->
 
+  <!-- MODALS -->
+  <div id="viewImageModal" class="position-fixed top-0 start-0 w-100"
+    style="z-index: 1031; display: none;background-color: rgba(0, 0, 0, .5);opacity: 0;transition: opacity .5s ease-in-out;">
+    <div class="container">
+      <div class="row align-items-center justify-content-center overflow-y-auto py-5" style="height: 100vh;">
+        <div class="col-8 col-lg-4 text-center">
+          <img class="w-100 mb-3" src="./assets/img/404-error-animate.svg">
+          <button class="btn btn-primary" onclick="closeViewImageModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
+  <!-- VIEW IMAGE SCRIPT -->
+  <script>
+    const modal = document.getElementById('viewImageModal');
+    const modalImg = document.querySelector("#viewImageModal img");
+
+    document.querySelectorAll('#posts .col-lg-4').forEach(col => {
+      col.addEventListener('click', () => {
+        console.log('ok');
+        modal.style.display = "block";
+        setTimeout(() => {
+          modal.style.opacity = "1";
+        }, 100);
+        modalImg.src = './assets/img/' + col.querySelector('img').alt;
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    function closeViewImageModal() {
+      modal.style.opacity = "0";
+      setTimeout(() => {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }, 500);
+    }
+
+  </script>
+
+  <!-- COUNTDOWN SCRIPT -->
   <script>
     // Set the date we're counting down to
     const countDownDate = new Date("Oct 1, 2024 00:00:00").getTime();
