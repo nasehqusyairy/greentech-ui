@@ -25,15 +25,18 @@
       color: white;
     }
 
-    #speakers .card-body {
+    #speakers .card-body,
+    #invited-speakers .card-body {
       min-height: 325px;
     }
 
-    #speakers .card {
+    #speakers .card,
+    #invited-speakers .card {
       transition: all 0.3s ease-in-out;
     }
 
     #speakers .card:hover,
+    #invited-speakers .card:hover,
     #workflow .card:hover {
       box-shadow: var(--bs-box-shadow-lg);
       transform: scale(1.05);
@@ -130,7 +133,7 @@
             <a class="nav-link" href="#fee">Fee</a>
             <a class="nav-link" href="#submissions">Submissions</a>
             <a class="nav-link" href="#contact">Contact</a>
-            <a class="btn btn-primary" href="./login.html">Sign In</a>
+            <div class="nav-link"><a class="btn btn-primary" href="./login.html">Sign In</a></div>
           </div>
         </div>
       </div>
@@ -138,27 +141,29 @@
   </div>
   <!-- END OF NAVBAR -->
 
-  <!-- CAROUSEL -->
+  <!-- JUMBOTRON -->
   <section id="jumbotron" class="py-5 text-center d-flex align-items-center">
     <div class="container">
       <!-- <img src="./assets/img/LOGO_TRANSPARAN.png" alt="" class="img-fluid mb-3" style="width: 300px;"> -->
-      <h3 class="display-4">THE 14TH INTERNATIONAL CONFERENCE ON GREEN TECHNOLOGY (ICGT)</h3>
-      <div class="lead">
+      <h3 class="display-4" data-aos="zoom-in" data-aos-delay="750">THE 14TH INTERNATIONAL CONFERENCE ON GREEN
+        TECHNOLOGY (ICGT)</h3>
+      <div class="lead" data-aos="zoom-in" data-aos-delay="1000">
         <h5 class="mb-5">"Emerging Green Technology: A Path Towards Resilient and
           Sustainable Built Environment"</h5>
         <h5>October 2024 - Hybrid Meeting</h5>
         <h5 class="mb-5">Malang, Indonesia</h5>
       </div>
-      <a href="./register.html" class="btn btn-primary mt-3 btn-lg">Register</a>
+      <a href="./register.html" class="btn btn-primary mt-3 btn-lg" data-aos="zoom-in"
+        data-aos-delay="1500">Register</a>
     </div>
   </section>
-  <!-- END OF CAROUSEL -->
+  <!-- END OF JUMBOTRON -->
 
   <!-- COUNTDOWN -->
   <section id="countdown" class="bg-light py-5 text-primary">
     <div class="container">
       <div class="row text-center">
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0">
           <div class="card mb-3">
             <div class="card-body text-muted">
               <h1 class="display-1" id="days">0</h1>
@@ -166,7 +171,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="fade-down" data-aos-duration="500" data-aos-delay="250">
           <div class="card mb-3">
             <div class="card-body text-muted">
               <h1 class="display-1" id="hours">0</h1>
@@ -174,7 +179,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="fade-down" data-aos-duration="500" data-aos-delay="500">
           <div class="card mb-3">
             <div class="card-body text-muted">
               <h1 class="display-1" id="minutes">0</h1>
@@ -182,7 +187,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="fade-down" data-aos-duration="500" data-aos-delay="750">
           <div class="card mb-3">
             <div class="card-body text-muted">
               <h1 class="display-1" id="seconds">0</h1>
@@ -200,7 +205,7 @@
     <div class="container">
       <h3 class="display-4 text-center text-muted">About 14th ICGT 2024</h3>
       <div class="row align-items-center text-muted">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right">
           <img src="./assets/img/menpro-01.png" alt="" class="img-fluid rounded mb-3">
           <p class="text-justify text-muted">
             It is our pleasure to welcome you to the 2024 14th International Conference of Green Technology (ICGT 2024)
@@ -212,7 +217,7 @@
             Path Towards Resilient and Sustainable Built Environment” become the theme of The 14th ICGT 2024.
           </p>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left">
           <p class="text-justify">The scientific programs consist of keynote lectures, plenary lectures, and invited
             lectures in parallel sessions covering a wide range of topics in STEM areas. A major goal of these
             conferences introduce students to learning and working in the STEM world, keep experts in the STEM field
@@ -241,7 +246,7 @@
   <!-- SPEAKERS -->
   <section id="speakers" class="py-5 bg-light">
     <div class="container">
-      <div class="row mb-5">
+      <div class="row">
         <h3 class="display-4 mb-5 text-primary text-center">Keynote Speakers</h3>
         <div class="col-lg-4">
           <div class="card mb-3">
@@ -333,7 +338,10 @@
           </div>
         </div>
       </div>
-
+    </div>
+  </section>
+  <section id="invited-speakers" class="bg-light pb-5">
+    <div class="container">
       <div class="row justify-content-center">
         <h3 class="display-4 text-center mb-5 text-primary">Invited Speakers</h3>
         <div class="col-lg-4">
@@ -405,7 +413,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left">
           <img src="./assets/img/menpro-02.png" alt="Photo" class="img-fluid mb-5 m-lg-0 rounded">
         </div>
       </div>
@@ -419,7 +427,7 @@
       <div class="row justify-content-center">
         <div class="col">
           <h3 class="display-4 mb-5 text-primary text-center">Important Dates</h3>
-          <div class="card">
+          <div class="card" data-aos="fade-right">
             <div class="card-body">
               <table class="table text-muted table-hover">
                 <thead>
@@ -495,7 +503,7 @@
     <div class="container text-muted text-justify">
       <h3 class="display-4 mb-5 text-center">Publication</h3>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right">
           <p>
             Selected papers <strong>(with an additional publication fee)</strong> will be published in an
             international
@@ -529,7 +537,7 @@
               preparing the manuscript.</li>
           </ol>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left">
           <ol start="3">
             <li><u>JIA (Journal of Islamic Architecture)</u> ** (Scopus Indexed). Follow the author guideline Use
               the<strong> <u>template</u> </strong>when preparing the manuscript. The publication fee is IDR 3.500K (USD
@@ -681,7 +689,7 @@
     <div class="container text-muted">
       <h3 class="display-4 text-center mb-5">Scientific Committee</h3>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right">
           <h5>Editor</h5>
           <ul class="mb-3 text-justify">
             <li>Prof. Ueki (Hiroshima University, Japan)</li>
@@ -698,7 +706,7 @@
             <li>Prof. Ulfah Utami, M.Si (State Islamic University Maulana Malik Ibrahim Malang, Indonesia)</li>
           </ul>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left">
           <ul class="text-justify">
             <li>Prof. Dr. Bayyinatul Muchtaromah, M.Si (State Islamic University Maulana Malik Ibrahim Malang,
               Indonesia)</li>
@@ -721,7 +729,7 @@
   <section id="fee" class="py-5 bg-light">
     <div class="container">
       <h3 class="display-4 mb-5 text-center text-primary">Conference Fee</h3>
-      <div class="card">
+      <div class="card" data-aos="fade-right">
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-hover text-muted">
@@ -795,7 +803,7 @@
     <div class="container text-muted">
       <h3 class="display-4 text-center mb-5">Submissions</h3>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right">
           <p class="text-justify">To submit an extended abstract, you are <strong>required to submit the abstract
               first</strong>. After the admin
             grants approval within <strong>1-2 day</strong><strong>s</strong>, you can proceed to <strong>submit the
@@ -837,7 +845,7 @@
                 href="https://sbcc.upi.edu/2024/info/download"><strong>download page</strong></a>.</li>
           </ol>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left">
           <h6>Note :</h6>
           <ul class="text-justify">
             <li>The whole submission process is done fully online (NOT by email) to guarantee smooth administration.
@@ -1061,7 +1069,7 @@
     <div class="container">
       <h3 class="display-4 mb-5 text-center text-muted">Contact Us</h3>
       <div class="row flex-lg-row-reverse text-muted align-items-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left">
           <h3>Persons</h3>
           <ul class="mb-3">
             <li><a href="http://wa.me/6285655544977" target="_blank">Ana Ziyadatul Husna, M.Ars</a>
@@ -1097,7 +1105,7 @@
           </table>
           <img src="./assets/img/bri-logo.png" alt="LOGO BRI" class="img-fluid mb-3">
         </div>
-        <div class="col-lg-6 mb-3">
+        <div class="col-lg-6 mb-3" data-aos="fade-right">
           <h3>Venue</h3>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1975.7256563110893!2d112.60493378854807!3d-7.952225248018047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78836798cb0b17%3A0x52f15a858f4a4a06!2sFakultas%20Sains%20dan%20Teknologi%20-%20UIN%20Malang!5e0!3m2!1sid!2sus!4v1712247670056!5m2!1sid!2sus"
@@ -1175,10 +1183,41 @@
   <!-- AOS SCRIPT -->
   <script>
     document.querySelectorAll('.display-4').forEach(el => {
-      el.setAttribute('data-aos', 'fade-up');
+      el.setAttribute('data-aos', 'fade-down');
     });
+
+    const chainingAnimation = (el, delay) => {
+      el.setAttribute('data-aos-duration', '500');
+      el.setAttribute('data-aos-delay', delay);
+    }
+
+    const animateColumns = (animationName = 'fade-up', delayFunc = index => index * 250) => {
+      return (col, i) => {
+        col.setAttribute('data-aos', animationName);
+        chainingAnimation(col, delayFunc(i));
+      }
+    }
+
+    // select all cards in speakers section
+    document.querySelectorAll('#speakers .col-lg-4').forEach(animateColumns());
+    document.querySelectorAll('#invited-speakers .col-lg-4').forEach(animateColumns());
+
+    // select all cards in workflow section
+    document.querySelectorAll('#workflow .col-lg-3').forEach(animateColumns('fade-down'));
+
+    // select all cards in posts section
+    document.querySelectorAll('#posts .col-md-4').forEach(animateColumns('fade-down'));
+    document.querySelectorAll('#posts .col-md-4 .card').forEach(animateColumns('fade-down', i => (i + 1) * 1000));
+
+    // select all list items in scopes section
+    document.querySelectorAll('#scopes li').forEach((li, i) => {
+      li.setAttribute('data-aos', 'fade-right');
+      chainingAnimation(li, i);
+    });
+
     AOS.init({
-      once: true
+      once: true,
+      duration: 1000
     });
   </script>
 
