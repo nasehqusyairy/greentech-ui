@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="./assets/css/main.min.css">
   <link rel="shortcut icon" href="./assets/img/LOGO BULAT.png">
 
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- Theme Color -->
   <meta name="theme-color" content="#002929">
   <!-- <meta name="theme-color" content="#0d6efd"> -->
@@ -94,6 +97,10 @@
     #posts .card {
       transition: all 0.3s ease-in-out;
     }
+
+    .nav-link.active {
+      border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    }
   </style>
 </head>
 
@@ -123,6 +130,7 @@
             <a class="nav-link" href="#fee">Fee</a>
             <a class="nav-link" href="#submissions">Submissions</a>
             <a class="nav-link" href="#contact">Contact</a>
+            <a class="btn btn-primary" href="./login.html">Sign In</a>
           </div>
         </div>
       </div>
@@ -141,7 +149,7 @@
         <h5>October 2024 - Hybrid Meeting</h5>
         <h5 class="mb-5">Malang, Indonesia</h5>
       </div>
-      <a href="./login.html" class="btn btn-primary mt-3 btn-lg">Register</a>
+      <a href="./register.html" class="btn btn-primary mt-3 btn-lg">Register</a>
     </div>
   </section>
   <!-- END OF CAROUSEL -->
@@ -1162,6 +1170,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- AOS SCRIPT -->
+  <script>
+    document.querySelectorAll('.display-4').forEach(el => {
+      el.setAttribute('data-aos', 'fade-up');
+    });
+    AOS.init({
+      once: true
+    });
+  </script>
 
   <!-- VIEW IMAGE SCRIPT -->
   <script>
